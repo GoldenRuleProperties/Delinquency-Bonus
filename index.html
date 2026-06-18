@@ -3,28 +3,39 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Delinquency Summary</title>
+<title>Delinquency Summary · Clarisa Ramirez</title>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #F1F5F9; color: #0F172A; padding: 40px 24px; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #F1F5F9; color: #0F172A; padding: 24px; }
   .container { max-width: 800px; margin: 0 auto; }
-  .header { background: #FFFFFF; border-radius: 12px; padding: 24px 28px; margin-bottom: 20px; }
-  .header-title { font-size: 24px; font-weight: 500; color: #1E3A5F; }
-  .header-sub { font-size: 14px; color: #64748B; margin-top: 6px; }
-  .panel { background: #FFFFFF; border-radius: 12px; padding: 8px; }
-  .report-link { display: flex; justify-content: space-between; align-items: center; padding: 18px 24px; border-radius: 8px; text-decoration: none; color: #0F172A; transition: background 0.1s; border-bottom: 1px solid #F1F5F9; }
-  .report-link:last-child { border-bottom: none; }
-  .report-link:hover { background: #F8FAFC; }
-  .report-link.unavailable { opacity: 0.5; cursor: default; }
-  .report-link.unavailable:hover { background: transparent; }
-  .report-month { font-size: 16px; font-weight: 500; color: #1E3A5F; }
-  .report-meta { font-size: 13px; color: #64748B; margin-top: 4px; }
-  .report-right { display: flex; align-items: center; }
-  .report-bonus { font-size: 18px; font-weight: 500; color: #1E40AF; }
-  .report-bonus-zero { color: #94A3B8; }
-  .report-bonus-archived { font-size: 16px; color: #94A3B8; }
-  .arrow { color: #94A3B8; margin-left: 16px; font-size: 18px; }
-  .footer { margin-top: 24px; font-size: 13px; color: #94A3B8; text-align: center; }
+
+  .header { background: #FFFFFF; border-radius: 12px; padding: 20px 24px; margin-bottom: 16px; }
+  .header-title { font-size: 20px; font-weight: 500; color: #1E3A5F; }
+  .header-sub { font-size: 13px; color: #64748B; margin-top: 4px; }
+
+  .panel { background: #FFFFFF; border-radius: 12px; overflow: hidden; margin-bottom: 24px; }
+
+  .report-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+    text-decoration: none;
+    color: inherit;
+    transition: background 0.1s;
+  }
+  a.report-row:hover { background: #F8FAFC; }
+  .report-row.unavailable { cursor: default; opacity: 0.5; }
+
+  .row-month { font-size: 15px; font-weight: 500; color: #1E3A5F; }
+  .row-month-grey { color: #94A3B8; }
+  .row-pct { font-size: 12px; color: #64748B; margin-top: 2px; }
+  .row-right { display: flex; align-items: center; gap: 12px; }
+  .row-bonus { font-size: 16px; font-weight: 500; color: #1E40AF; }
+  .row-bonus-grey { color: #94A3B8; }
+  .row-arrow { font-size: 16px; color: #1E40AF; }
+
+  .footer { text-align: center; font-size: 12px; color: #94A3B8; padding-top: 4px; }
 </style>
 </head>
 <body>
@@ -36,50 +47,57 @@
   </div>
 
   <div class="panel">
-    <div class="report-link unavailable">
+    <div class="report-row unavailable" style="border-bottom: 1px solid #F1F5F9;">
       <div>
-        <div class="report-month">February 2026</div>
-        <div class="report-meta">Adjusted delinquency: 3.63% · Report not in this archive</div>
+        <div class="row-month row-month-grey">February 2026</div>
+        <div class="row-pct">3.63% delinquent</div>
       </div>
-      <div class="report-right">
-        <span class="report-bonus-archived">$250</span>
+      <div class="row-right">
+        <span class="row-bonus row-bonus-grey">$250</span>
       </div>
     </div>
-<div class="report-link unavailable">
+    <div class="report-row unavailable" style="border-bottom: 1px solid #F1F5F9;">
       <div>
-        <div class="report-month">March 2026</div>
-        <div class="report-meta">Adjusted delinquency: 2.97% · Report not in this archive</div>
+        <div class="row-month row-month-grey">March 2026</div>
+        <div class="row-pct">2.97% delinquent</div>
       </div>
-      <div class="report-right">
-        <span class="report-bonus-archived">$400</span>
+      <div class="row-right">
+        <span class="row-bonus row-bonus-grey">$400</span>
       </div>
     </div>
-<a class="report-link" href="apr-2026.html">
+    <a href="delinquency-bonus-april-2026.html" class="report-row" style="border-bottom: 1px solid #F1F5F9;">
       <div>
-        <div class="report-month">April 2026</div>
-        <div class="report-meta">Adjusted delinquency: 4.72%</div>
+        <div class="row-month">April 2026</div>
+        <div class="row-pct">4.72% delinquent</div>
       </div>
-      <div class="report-right">
-        <span class="report-bonus">$150</span>
-        <span class="arrow">→</span>
+      <div class="row-right">
+        <span class="row-bonus">$150</span>
+        <span class="row-arrow">&#8594;</span>
       </div>
     </a>
-<a class="report-link" href="may-2026.html">
+    <a href="delinquency-bonus-may-2026.html" class="report-row" style="border-bottom: 1px solid #F1F5F9;">
       <div>
-        <div class="report-month">May 2026</div>
-        <div class="report-meta">Adjusted delinquency: 5.40%</div>
+        <div class="row-month">May 2026</div>
+        <div class="row-pct">5.40% delinquent</div>
       </div>
-      <div class="report-right">
-        <span class="report-bonus report-bonus-zero">$0</span>
-        <span class="arrow">→</span>
+      <div class="row-right">
+        <span class="row-bonus">$0</span>
+        <span class="row-arrow">&#8594;</span>
       </div>
     </a>
-
+    <a href="jun-2026.html" class="report-row" style="">
+      <div>
+        <div class="row-month">June 2026</div>
+        <div class="row-pct">5.31% delinquent</div>
+      </div>
+      <div class="row-right">
+        <span class="row-bonus">$0</span>
+        <span class="row-arrow">&#8594;</span>
+      </div>
+    </a>
   </div>
 
-  <div class="footer">
-    New reports are added here each month.
-  </div>
+  <div class="footer">New reports are added here each month.</div>
 
 </div>
 </body>
