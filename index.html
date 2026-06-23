@@ -3,39 +3,28 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Delinquency Summary · Clarisa Ramirez</title>
+<title>Delinquency Bonus &middot; Clarisa Ramirez</title>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #F1F5F9; color: #0F172A; padding: 24px; }
   .container { max-width: 800px; margin: 0 auto; }
-
   .header { background: #FFFFFF; border-radius: 12px; padding: 20px 24px; margin-bottom: 16px; }
   .header-title { font-size: 20px; font-weight: 500; color: #1E3A5F; }
   .header-sub { font-size: 13px; color: #64748B; margin-top: 4px; }
-
-  .panel { background: #FFFFFF; border-radius: 12px; overflow: hidden; margin-bottom: 24px; }
-
-  .report-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 16px 24px;
-    text-decoration: none;
-    color: inherit;
-    transition: background 0.1s;
-  }
-  a.report-row:hover { background: #F8FAFC; }
-  .report-row.unavailable { cursor: default; opacity: 0.5; }
-
-  .row-month { font-size: 15px; font-weight: 500; color: #1E3A5F; }
-  .row-month-grey { color: #94A3B8; }
-  .row-pct { font-size: 12px; color: #64748B; margin-top: 2px; }
-  .row-right { display: flex; align-items: center; gap: 12px; }
-  .row-bonus { font-size: 16px; font-weight: 500; color: #1E40AF; }
-  .row-bonus-grey { color: #94A3B8; }
-  .row-arrow { font-size: 16px; color: #1E40AF; }
-
-  .footer { text-align: center; font-size: 12px; color: #94A3B8; padding-top: 4px; }
+  .panel { background: #FFFFFF; border-radius: 12px; padding: 0; overflow: hidden; margin-bottom: 16px; }
+  .report-row { display: flex; align-items: center; padding: 16px 24px; border-bottom: 1px solid #F1F5F9; text-decoration: none; color: inherit; }
+  .report-row:last-child { border-bottom: none; }
+  .report-row.available:hover { background: #F8FAFC; }
+  .report-row.unavailable { cursor: default; }
+  .month-name { font-size: 15px; font-weight: 500; color: #1E3A5F; flex: 1; }
+  .month-pct { font-size: 13px; color: #64748B; margin-right: 24px; }
+  .month-bonus { font-size: 15px; font-weight: 500; color: #1E40AF; margin-right: 16px; min-width: 48px; text-align: right; }
+  .arrow { font-size: 16px; color: #1E40AF; }
+  .report-row.unavailable .month-name { color: #94A3B8; }
+  .report-row.unavailable .month-pct { color: #CBD5E1; }
+  .report-row.unavailable .month-bonus { color: #CBD5E1; }
+  .report-row.unavailable .arrow { color: #CBD5E1; }
+  .footer { text-align: center; font-size: 12px; color: #94A3B8; margin-top: 8px; }
 </style>
 </head>
 <body>
@@ -43,57 +32,39 @@
 
   <div class="header">
     <div class="header-title">Delinquency Summary</div>
-    <div class="header-sub">Clarisa Ramirez · monthly bonus calculation history</div>
+    <div class="header-sub">Clarisa Ramirez &middot; monthly bonus calculation history</div>
   </div>
 
   <div class="panel">
-    <div class="report-row unavailable" style="border-bottom: 1px solid #F1F5F9;">
-      <div>
-        <div class="row-month row-month-grey">February 2026</div>
-        <div class="row-pct">3.63% delinquent</div>
-      </div>
-      <div class="row-right">
-        <span class="row-bonus row-bonus-grey">$250</span>
-      </div>
+    <div class="report-row unavailable">
+      <span class="month-name">February 2026</span>
+      <span class="month-pct">3.63%</span>
+      <span class="month-bonus">$250</span>
+      <span class="arrow">&#8594;</span>
     </div>
-    <div class="report-row unavailable" style="border-bottom: 1px solid #F1F5F9;">
-      <div>
-        <div class="row-month row-month-grey">March 2026</div>
-        <div class="row-pct">2.97% delinquent</div>
-      </div>
-      <div class="row-right">
-        <span class="row-bonus row-bonus-grey">$400</span>
-      </div>
+    <div class="report-row unavailable">
+      <span class="month-name">March 2026</span>
+      <span class="month-pct">2.97%</span>
+      <span class="month-bonus">$400</span>
+      <span class="arrow">&#8594;</span>
     </div>
-    <a href="delinquency-bonus-april-2026.html" class="report-row" style="border-bottom: 1px solid #F1F5F9;">
-      <div>
-        <div class="row-month">April 2026</div>
-        <div class="row-pct">4.72% delinquent</div>
-      </div>
-      <div class="row-right">
-        <span class="row-bonus">$150</span>
-        <span class="row-arrow">&#8594;</span>
-      </div>
+    <a class="report-row available" href="apr-2026.html">
+      <span class="month-name">April 2026</span>
+      <span class="month-pct">4.72%</span>
+      <span class="month-bonus">$150</span>
+      <span class="arrow">&#8594;</span>
     </a>
-    <a href="delinquency-bonus-may-2026.html" class="report-row" style="border-bottom: 1px solid #F1F5F9;">
-      <div>
-        <div class="row-month">May 2026</div>
-        <div class="row-pct">5.40% delinquent</div>
-      </div>
-      <div class="row-right">
-        <span class="row-bonus">$0</span>
-        <span class="row-arrow">&#8594;</span>
-      </div>
+    <a class="report-row available" href="may-2026.html">
+      <span class="month-name">May 2026</span>
+      <span class="month-pct">5.40%</span>
+      <span class="month-bonus">$0</span>
+      <span class="arrow">&#8594;</span>
     </a>
-    <a href="jun-2026.html" class="report-row" style="">
-      <div>
-        <div class="row-month">June 2026</div>
-        <div class="row-pct">5.31% delinquent</div>
-      </div>
-      <div class="row-right">
-        <span class="row-bonus">$0</span>
-        <span class="row-arrow">&#8594;</span>
-      </div>
+    <a class="report-row available" href="jun-2026.html">
+      <span class="month-name">June 2026</span>
+      <span class="month-pct">4.06%</span>
+      <span class="month-bonus">$150</span>
+      <span class="arrow">&#8594;</span>
     </a>
   </div>
 

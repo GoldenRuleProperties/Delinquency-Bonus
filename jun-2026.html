@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Delinquency Bonus · June 2026</title>
+<title>Delinquency Bonus &middot; June 2026</title>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #F1F5F9; color: #0F172A; padding: 24px; }
@@ -47,7 +47,7 @@
   tr.property-header td { background: #1E3A5F; color: #FFFFFF; font-weight: 500; padding: 8px 10px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.04em; }
   tr.subtotal td { background: #DBEAFE; font-weight: 500; color: #1E3A5F; }
   tr.excluded td { background: #FEE2E2; color: #991B1B; }
-  tr.excluded td:first-child::before { content: "✗ "; font-weight: bold; }
+  tr.excluded td:first-child::before { content: "\2717 "; font-weight: bold; }
   tr.grand-total td { background: #1E3A5F; color: #FFFFFF; font-weight: 500; }
 
   .reports-banner { background: #F8FAFC; border-radius: 8px; padding: 10px 14px; margin-bottom: 16px; display: flex; gap: 20px; font-size: 12px; color: #64748B; }
@@ -74,31 +74,31 @@
   <div class="header">
     <div>
       <div class="header-title">Delinquency Bonus Summary</div>
-      <div class="header-sub">June 2026 · Clarisa Ramirez</div>
+      <div class="header-sub">June 2026 &middot; Clarisa Ramirez</div>
     </div>
-    <a href="index.html" class="header-link">&#8592; All reports</a>
+    <a class="header-link" href="index.html">&larr; All reports</a>
   </div>
 
   <div class="reports-banner">
     <span><strong>Source:</strong> Delinquency_Bonus_Delinquency_1.csv</span>
     <span><strong>Source:</strong> Delinquency_Bonus_Charge_Detail_2.csv</span>
-    <span><strong>Date range:</strong> 6/1/26 – 6/15/26</span>
+    <span><strong>Date range:</strong> 6/1/26 &ndash; 6/9/26</span>
   </div>
 
   <div class="summary-grid">
     <div class="summary-card">
       <div class="summary-label">Adjusted Delinquent</div>
-      <div class="summary-value">$19,351.40</div>
+      <div class="summary-value">$14,807.01</div>
       <div class="summary-sub">After exclusions</div>
     </div>
     <div class="summary-card">
       <div class="summary-label">Adjusted % Delinquent</div>
-      <div class="summary-value">5.31%</div>
-      <div class="summary-sub">Bonus tier: Above 5%</div>
+      <div class="summary-value">4.06%</div>
+      <div class="summary-sub">Bonus tier: 5% or less</div>
     </div>
     <div class="summary-card bonus-card">
       <div class="summary-label">June Bonus</div>
-      <div class="summary-value">$0</div>
+      <div class="summary-value">$150</div>
       <div class="summary-sub">Paid on next month-end pay date</div>
     </div>
   </div>
@@ -112,6 +112,13 @@
       <div style="padding: 8px 0 4px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.04em; color: #64748B; font-weight: 500;">Exclusions</div>
       <div class="calc-row exclusion">
         <div>
+          <div class="calc-label">Borrero, Romualdo</div>
+          <div class="exclusion-reason">Active eviction</div>
+        </div>
+        <span class="calc-value">$2,118.19</span>
+      </div>
+      <div class="calc-row exclusion">
+        <div>
           <div class="calc-label">Allred, Johnathan</div>
           <div class="exclusion-reason">PEP Eviction</div>
         </div>
@@ -119,12 +126,19 @@
       </div>
       <div class="calc-row exclusion">
         <div>
+          <div class="calc-label">Vargas, Yeni</div>
+          <div class="exclusion-reason">Home being physically removed, will be written off as bad debt</div>
+        </div>
+        <span class="calc-value">$2,426.20</span>
+      </div>
+      <div class="calc-row exclusion">
+        <div>
           <div class="calc-label">Sinden Jr., Arthur</div>
-          <div class="exclusion-reason">In Court</div>
+          <div class="exclusion-reason">In court</div>
         </div>
         <span class="calc-value">$3,600.00</span>
       </div>
-      <div class="calc-row total"><span class="calc-label">Adjusted Delinquent</span><span class="calc-value">$19,351.40</span></div>
+      <div class="calc-row total"><span class="calc-label">Adjusted Delinquent</span><span class="calc-value">$14,807.01</span></div>
     </div>
 
     <div class="panel">
@@ -133,23 +147,26 @@
         <div class="tier-card">
           <div class="tier-threshold">3% or less</div>
           <div class="tier-amount">$400</div>
+          
         </div>
         <div class="tier-card">
           <div class="tier-threshold">4% or less</div>
           <div class="tier-amount">$250</div>
-        </div>
-        <div class="tier-card">
-          <div class="tier-threshold">5% or less</div>
-          <div class="tier-amount">$150</div>
+          
         </div>
         <div class="tier-card active">
+          <div class="tier-threshold">5% or less</div>
+          <div class="tier-amount">$150</div>
+          <div class="tier-active-label">Current month</div>
+        </div>
+        <div class="tier-card">
           <div class="tier-threshold">Above 5%</div>
           <div class="tier-amount">$0</div>
-          <div class="tier-active-label">Current month</div>
+          
         </div>
       </div>
       <div style="margin-top: 16px; font-size: 12px; color: #64748B; line-height: 1.5;">
-        June adjusted delinquency of 5.31% exceeds 5.00%, qualifying for no bonus this month. To reach the $150 tier, adjusted delinquency would need to be 5.00% or below.
+        June adjusted delinquency of 4.06% falls between 4% and 5%, qualifying for the 5% tier of $150. To reach the $250 tier, adjusted delinquency would need to be 4.00% or below.
       </div>
     </div>
   </div>
@@ -179,8 +196,8 @@
       </div>
       <div class="history-card current">
         <div class="history-month">Jun 2026</div>
-        <div class="history-pct">5.31%</div>
-        <div class="history-bonus">$0</div>
+        <div class="history-pct">4.06%</div>
+        <div class="history-bonus">$150</div>
       </div>
     </div>
   </div>
@@ -198,49 +215,49 @@
         </thead>
         <tbody>
 <tr class="property-header"><td colspan="3">Country Aire</td></tr>
-<tr><td>Vanessa Schrock</td><td>2011 W 3rd St</td><td class="right">$507.49</td></tr>
-<tr class="subtotal"><td colspan="2">Subtotal · Country Aire</td><td class="right">$507.49</td></tr>
+<tr><td>Schrock, Vanessa</td><td>2011 W 3rd St</td><td class="right">$507.49</td></tr>
+<tr class="subtotal"><td colspan="2">Subtotal &middot; Country Aire</td><td class="right">$507.49</td></tr>
 <tr class="property-header"><td colspan="3">Countryside Parks</td></tr>
-<tr><td>Romualdo Borrero</td><td>20 Powerli</td><td class="right">$2,118.19</td></tr>
-<tr><td>Kathleen Baldwin</td><td>309 Knox</td><td class="right">$141.65</td></tr>
-<tr><td>Jamie Schroeder</td><td>316 Sherry</td><td class="right">$131.10</td></tr>
-<tr><td>Billie Jo Hobling</td><td>409 Poplar</td><td class="right">$1,225.39</td></tr>
-<tr><td>Magdelena Portillo</td><td>2115 Spruc</td><td class="right">$513.10</td></tr>
-<tr><td>Judith Silva</td><td>2121 Patri</td><td class="right">$1,333.55</td></tr>
-<tr><td>Ivan Herrera</td><td>2133 Patri</td><td class="right">$1,183.65</td></tr>
-<tr class="excluded"><td>Johnathan Allred</td><td>2150 Patri</td><td class="right">$2,594.40</td></tr>
-<tr><td>Kenneth Scott</td><td>2173 Patri</td><td class="right">$392.58</td></tr>
-<tr><td>Yeni Vargas</td><td>2174 Patri</td><td class="right">$2,426.20</td></tr>
-<tr class="subtotal"><td colspan="2">Subtotal · Countryside Parks</td><td class="right">$9,465.41</td></tr>
+<tr class="excluded"><td>Borrero, Romualdo</td><td>20 Powerli</td><td class="right">$2,118.19</td></tr>
+<tr><td>Baldwin, Kathleen</td><td>309 Knox</td><td class="right">$141.65</td></tr>
+<tr><td>Schroeder, Jamie</td><td>316 Sherry</td><td class="right">$131.10</td></tr>
+<tr><td>Hobling, Billie Jo</td><td>409 Poplar</td><td class="right">$1,225.39</td></tr>
+<tr><td>Portillo, Magdelena</td><td>2115 Spruc</td><td class="right">$513.10</td></tr>
+<tr><td>Silva, Judith</td><td>2121 Patri</td><td class="right">$1,333.55</td></tr>
+<tr><td>Herrera, Ivan</td><td>2133 Patri</td><td class="right">$1,183.65</td></tr>
+<tr class="excluded"><td>Allred, Johnathan</td><td>2150 Patri</td><td class="right">$2,594.40</td></tr>
+<tr><td>Scott, Kenneth</td><td>2173 Patri</td><td class="right">$392.58</td></tr>
+<tr class="excluded"><td>Vargas, Yeni</td><td>2174 Patri</td><td class="right">$2,426.20</td></tr>
+<tr class="subtotal"><td colspan="2">Subtotal &middot; Countryside Parks</td><td class="right">$12,059.81</td></tr>
 <tr class="property-header"><td colspan="3">Decade Acres</td></tr>
-<tr><td>David Barajas</td><td><Multi></td><td class="right">$351.00</td></tr>
-<tr><td>Jamie Funk</td><td>27</td><td class="right">$400.00</td></tr>
-<tr><td>cara koehler</td><td>41</td><td class="right">$400.00</td></tr>
-<tr><td>Darlana Merritt</td><td>56</td><td class="right">$400.00</td></tr>
-<tr class="subtotal"><td colspan="2">Subtotal · Decade Acres</td><td class="right">$1,551.00</td></tr>
+<tr><td>Barajas, David</td><td><Multi></td><td class="right">$351.00</td></tr>
+<tr><td>Funk, Jamie</td><td>27</td><td class="right">$400.00</td></tr>
+<tr><td>koehler, cara</td><td>41</td><td class="right">$400.00</td></tr>
+<tr><td>Merritt, Darlana</td><td>56</td><td class="right">$400.00</td></tr>
+<tr class="subtotal"><td colspan="2">Subtotal &middot; Decade Acres</td><td class="right">$1,551.00</td></tr>
 <tr class="property-header"><td colspan="3">Four Seasons</td></tr>
-<tr><td>Kendra Ramos- De Jesus</td><td>8</td><td class="right">$790.00</td></tr>
-<tr><td>Olivia Engledow</td><td>016</td><td class="right">$945.00</td></tr>
-<tr><td>Sharon Williams</td><td>23</td><td class="right">$662.50</td></tr>
-<tr><td>Ronald Duncan</td><td>46</td><td class="right">$400.00</td></tr>
-<tr><td>Latonja Doris Andrews</td><td>52</td><td class="right">$455.00</td></tr>
-<tr><td>Camilla Miles</td><td>057</td><td class="right">$1,050.00</td></tr>
-<tr class="subtotal"><td colspan="2">Subtotal · Four Seasons</td><td class="right">$4,302.50</td></tr>
+<tr><td>Ramos- De Jesus, Kendra</td><td>8</td><td class="right">$790.00</td></tr>
+<tr><td>Engledow, Olivia</td><td>016</td><td class="right">$945.00</td></tr>
+<tr><td>Williams, Sharon</td><td>23</td><td class="right">$662.50</td></tr>
+<tr><td>Duncan, Ronald</td><td>46</td><td class="right">$400.00</td></tr>
+<tr><td>Andrews, Latonja Doris</td><td>52</td><td class="right">$455.00</td></tr>
+<tr><td>Miles, Camilla</td><td>057</td><td class="right">$1,050.00</td></tr>
+<tr class="subtotal"><td colspan="2">Subtotal &middot; Four Seasons</td><td class="right">$4,302.50</td></tr>
 <tr class="property-header"><td colspan="3">Riverside Estates</td></tr>
-<tr><td>Cindy Hatfield</td><td><Multi></td><td class="right">$1,268.00</td></tr>
-<tr><td>Melissa Wyss</td><td>35</td><td class="right">$282.00</td></tr>
-<tr><td>Anthony Figuero</td><td>65</td><td class="right">$425.00</td></tr>
-<tr class="subtotal"><td colspan="2">Subtotal · Riverside Estates</td><td class="right">$1,975.00</td></tr>
+<tr><td>Hatfield, Cindy</td><td><Multi></td><td class="right">$1,268.00</td></tr>
+<tr><td>Wyss, Melissa</td><td>35</td><td class="right">$282.00</td></tr>
+<tr><td>Figuero, Anthony</td><td>65</td><td class="right">$425.00</td></tr>
+<tr class="subtotal"><td colspan="2">Subtotal &middot; Riverside Estates</td><td class="right">$1,975.00</td></tr>
 <tr class="property-header"><td colspan="3">Winterwood Estates</td></tr>
-<tr><td>Quira Graves</td><td>8G </td><td class="right">$600.00</td></tr>
-<tr><td>Brad Miller</td><td>12F </td><td class="right">$50.00</td></tr>
-<tr class="excluded"><td>Arthur Sinden Jr.</td><td>25A </td><td class="right">$3,600.00</td></tr>
-<tr><td>ROCHELLE BOLES</td><td>28A </td><td class="right">$450.00</td></tr>
-<tr><td>Charles Knight</td><td>29A </td><td class="right">$450.00</td></tr>
-<tr class="subtotal"><td colspan="2">Subtotal · Winterwood Estates</td><td class="right">$1,550.00</td></tr>
+<tr><td>Graves, Quira</td><td>8G</td><td class="right">$600.00</td></tr>
+<tr><td>Miller, Brad</td><td>12F</td><td class="right">$50.00</td></tr>
+<tr class="excluded"><td>Sinden Jr., Arthur</td><td>25A</td><td class="right">$3,600.00</td></tr>
+<tr><td>BOLES, ROCHELLE</td><td>28A</td><td class="right">$450.00</td></tr>
+<tr><td>Knight, Charles</td><td>29A</td><td class="right">$450.00</td></tr>
+<tr class="subtotal"><td colspan="2">Subtotal &middot; Winterwood Estates</td><td class="right">$5,150.00</td></tr>
 <tr class="grand-total"><td colspan="2">Total Delinquent</td><td class="right">$25,545.80</td></tr>
-<tr class="grand-total"><td colspan="2">Less exclusions</td><td class="right">($6,194.40)</td></tr>
-<tr class="grand-total"><td colspan="2">Adjusted Total</td><td class="right">$19,351.40</td></tr>
+<tr class="grand-total"><td colspan="2">Less exclusions</td><td class="right">($10,738.79)</td></tr>
+<tr class="grand-total"><td colspan="2">Adjusted Total</td><td class="right">$14,807.01</td></tr>
         </tbody>
       </table>
     </div>
@@ -257,25 +274,25 @@
           </tr>
         </thead>
         <tbody>
-<tr><td>RC</td><td>Lot Rent Charge</td><td class="right">575</td><td class="right">$258,600.50</td></tr>
 <tr><td>*SALE*</td><td>GRP Home Sale</td><td class="right">5</td><td class="right">$48,605.00</td></tr>
-<tr><td>POC</td><td>Park Owned Home Rental</td><td class="right">53</td><td class="right">$22,039.92</td></tr>
-<tr><td>SEWER</td><td>Sewer</td><td class="right">238</td><td class="right">$10,615.48</td></tr>
-<tr><td>H2O</td><td>Water Utility</td><td class="right">238</td><td class="right">$6,300.61</td></tr>
-<tr><td>RNTCRD</td><td>Rent Credit</td><td class="right">13</td><td class="right">$4,740.25</td></tr>
-<tr><td>DP</td><td>Security Deposits</td><td class="right">4</td><td class="right">$2,755.00</td></tr>
-<tr><td>LC</td><td>Late Charge</td><td class="right">55</td><td class="right">$2,460.00</td></tr>
-<tr><td>MC</td><td>Mowing Charge</td><td class="right">64</td><td class="right">$2,170.00</td></tr>
-<tr><td>RVRENT</td><td>RV Rent</td><td class="right">4</td><td class="right">$1,480.00</td></tr>
-<tr><td>GARBAG</td><td>Garbage Fee</td><td class="right">46</td><td class="right">$1,121.02</td></tr>
-<tr><td>CF</td><td>Convenience Fee for ACH</td><td class="right">259</td><td class="right">$938.10</td></tr>
-<tr><td>RTOREC</td><td>RTO Receivable</td><td class="right">2</td><td class="right">$867.39</td></tr>
-<tr><td>PETFEE</td><td>Pet Fee Non-Refundable</td><td class="right">12</td><td class="right">$425.00</td></tr>
-<tr><td>Earned</td><td>Rent Credit Earned from Payment Received</td><td class="right">1</td><td class="right">$375.00</td></tr>
-<tr><td>ELECT</td><td>Electric Utility</td><td class="right">2</td><td class="right">$250.00</td></tr>
-<tr><td>INT</td><td>Interest</td><td class="right">2</td><td class="right">$218.64</td></tr>
 <tr><td>APPFEE</td><td>Application Fee</td><td class="right">2</td><td class="right">$135.00</td></tr>
-<tr><td>CW</td><td>Community WiFi</td><td class="right">1</td><td class="right">$126.04</td></tr>
+<tr><td>CF</td><td>Convenience Fee for ACH</td><td class="right">260</td><td class="right">$938.10</td></tr>
+<tr><td>CW</td><td>Credit Waiver</td><td class="right">1</td><td class="right">$126.04</td></tr>
+<tr><td>DP</td><td>Security Deposits</td><td class="right">4</td><td class="right">$2,755.00</td></tr>
+<tr><td>ELECT</td><td>Electric Utility</td><td class="right">2</td><td class="right">$250.00</td></tr>
+<tr><td>Earned</td><td>Rent Credit Earned</td><td class="right">1</td><td class="right">$375.00</td></tr>
+<tr><td>GARBAG</td><td>Garbage Fee</td><td class="right">46</td><td class="right">$1,121.02</td></tr>
+<tr><td>H2O</td><td>Water Utility</td><td class="right">255</td><td class="right">$6,300.61</td></tr>
+<tr><td>INT</td><td>Interest</td><td class="right">2</td><td class="right">$218.64</td></tr>
+<tr><td>LC</td><td>Late Charge</td><td class="right">55</td><td class="right">$2,460.00</td></tr>
+<tr><td>MC</td><td>Mowing Charge</td><td class="right">65</td><td class="right">$2,170.00</td></tr>
+<tr><td>PETFEE</td><td>Pet Fee Non-Refundable</td><td class="right">12</td><td class="right">$425.00</td></tr>
+<tr><td>POC</td><td>Park Owned Home Rental</td><td class="right">53</td><td class="right">$22,039.92</td></tr>
+<tr><td>RC</td><td>Lot Rent Charge</td><td class="right">595</td><td class="right">$258,600.50</td></tr>
+<tr><td>RNTCRD</td><td>Rent Credit</td><td class="right">13</td><td class="right">$4,740.25</td></tr>
+<tr><td>RTOREC</td><td>RTO Receivable</td><td class="right">2</td><td class="right">$867.39</td></tr>
+<tr><td>RVRENT</td><td>RV Rent</td><td class="right">4</td><td class="right">$1,480.00</td></tr>
+<tr><td>SEWER</td><td>Sewer</td><td class="right">255</td><td class="right">$10,615.48</td></tr>
 <tr><td>STORE</td><td>Storage Fees</td><td class="right">1</td><td class="right">$100.00</td></tr>
 <tr><td>TDCLN</td><td>Trash / Debris Cleanup</td><td class="right">1</td><td class="right">$24.37</td></tr>
 <tr class="grand-total"><td colspan="3">Total Amount Charged</td><td class="right">$364,347.32</td></tr>
